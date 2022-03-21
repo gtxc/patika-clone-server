@@ -1,0 +1,46 @@
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "asdf",
+  "password": "asdfas"
+}
+
+###
+GET http://localhost:8080/api/test/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2RmIiwiaWF0IjoxNjQ3NTE0MjE5LCJleHAiOjE2NDc1MTc4MTl9.f1ZLp4OtRwdCL4X4QGcX9AuvcTWl6euydJASW3Y7zHMvBmnVxoJhit0PyuYlmFhh-t8Ed8ngzwdyXgcaqs3kiA
+
+
+###
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "gt",
+  "lastName": "tt",
+  "username": "qtdev",
+  "email": "1qw@email.com",
+  "password": "password",
+  "role": ["DEV", "STUDENT"]
+}
+
+
+###
+GET http://localhost:8080/api/test/user
+Accept: application/json
+
+###
+GET http://localhost:8080/api/test/all
+Accept: application/json
+
+###
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "qtdev",
+  "password": "password"
+}
+
+<> 2022-03-15T141842.200.json
