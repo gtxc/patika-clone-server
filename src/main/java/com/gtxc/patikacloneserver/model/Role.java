@@ -5,15 +5,24 @@ package com.gtxc.patikacloneserver.model;
     Project: patika-clone-server, Package: com.gtxc.patikacloneserver.model.
 */
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
 public class Role implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
+    @Enumerated(EnumType.STRING)
+    @Column(unique = true)
     private RoleType roleType;
-
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable( name = "USER_ROLES",
+            joinColumns = @JoinColumn(name = "USER_ID"),
+            inverseJoinColumns = @JoinColumn(name = "ROLE_ID"))
     private Set<User> users = new HashSet<>();
 
     public Role() {}

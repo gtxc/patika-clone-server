@@ -5,20 +5,43 @@ package com.gtxc.patikacloneserver.model;
     Project: patika-clone-server, Package: com.gtxc.patikacloneserver.model.
 */
 
+import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
 public class User implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     private String firstName;
     private String lastName;
+    @NotBlank
+    @Size(max = 20)
+    @Column(unique = true)
     private String username;
+    @NotBlank
+    @Size(max = 50)
+    @Email
+    @Column(unique = true)
     private String email;
+    @NotBlank
+    @Size(max = 120)
     private String password;
-
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable( name = "USER_ROLES",
+                joinColumns = @JoinColumn(name = "USER_ID"),
+                inverseJoinColumns = @JoinColumn(name = "ROLE_ID"))
     private Set<Role> roles = new HashSet<>();
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable( name = "USER_COURSES",
+                joinColumns = @JoinColumn(name = "USER_ID"),
+                inverseJoinColumns = @JoinColumn(name = "COURSE_ID"))
     private Set<Course> courses = new HashSet<>();
     private Set<Patika> patikas = new HashSet<>();
 
