@@ -11,6 +11,7 @@ import com.gtxc.patikacloneserver.helper.SQLStatement;
 import com.gtxc.patikacloneserver.model.Course;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.sql.*;
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class CourseRepository implements SimpleCrudRepository<Course, Long> {
+public interface CourseRepository extends JpaRepository<Course, Long> {
 
     private static final Logger log = LoggerFactory.getLogger(CourseRepository.class);
 

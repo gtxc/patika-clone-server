@@ -6,12 +6,12 @@ package com.gtxc.patikacloneserver.repository;
 */
 
 import com.gtxc.patikacloneserver.exceptions.SQLite3Exception;
-import com.gtxc.patikacloneserver.helper.DBConnector;
 import com.gtxc.patikacloneserver.helper.SQLStatement;
 import com.gtxc.patikacloneserver.model.Role;
 import com.gtxc.patikacloneserver.model.RoleType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import java.sql.*;
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class RoleRepository implements SimpleCrudRepository<Role, Long> {
+public interface RoleRepository extends JpaRepository<Role, Long> {
 
     private static final Logger log = LoggerFactory.getLogger(RoleRepository.class);
 
