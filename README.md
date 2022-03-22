@@ -1,2 +1,2 @@
 # patika-clone-server  
-spring-boot sqlite
+spring-boot h2
