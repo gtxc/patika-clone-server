@@ -1,0 +1,6 @@
+#FileLock
+#Tue Mar 22 16:51:19 TRT 2022
+hostName=arch
+id=17fb1e575c1b61e2d1a3dcf290a55bdd3bb9387e8bd
+method=file
+server=192.168.1.105\:43709
