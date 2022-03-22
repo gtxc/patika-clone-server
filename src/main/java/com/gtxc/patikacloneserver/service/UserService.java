@@ -13,7 +13,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class UserService implements SimpleEntityService<User, Long> {
@@ -58,9 +57,9 @@ public class UserService implements SimpleEntityService<User, Long> {
             log.warn(unavailable);
             throw new IllegalArgumentException(unavailable);
         }
-        Optional<User> newUser = userRepository.save(user);
-        if (newUser.isPresent()) {
-            return newUser.get();
+        User newUser = userRepository.save(user);
+        if (newUser.getId() != null) {
+            return newUser;
         } else {
             String retrieveError = "Error while getting added user : " + user;
             log.warn(retrieveError);

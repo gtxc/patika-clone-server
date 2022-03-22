@@ -12,8 +12,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class CourseService implements SimpleEntityService<Course, Long> {
@@ -54,9 +54,9 @@ public class CourseService implements SimpleEntityService<Course, Long> {
             log.warn(unavailable);
             throw new IllegalArgumentException(unavailable);
         }
-        Optional<Course> newCourse = courseRepository.save(course);
-        if (newCourse.isPresent()) {
-            return newCourse.get();
+        Course newCourse = courseRepository.save(course);
+        if (newCourse.getId() != null) {
+            return newCourse;
         } else {
             String retrieveError = "Error while getting added course : " + course;
             log.warn(retrieveError);

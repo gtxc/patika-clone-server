@@ -12,8 +12,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class PatikaService implements SimpleEntityService<Patika, Long> {
@@ -54,9 +54,9 @@ public class PatikaService implements SimpleEntityService<Patika, Long> {
             log.warn(unavailable);
             throw new IllegalArgumentException(unavailable);
         }
-        Optional<Patika> newPatika = patikaRepository.save(patika);
-        if (newPatika.isPresent()) {
-            return newPatika.get();
+        Patika newPatika = patikaRepository.save(patika);
+        if (newPatika.getId() != null) {
+            return newPatika;
         } else {
             String retrieveError = "Error while getting added patika : " + patika;
             log.warn(retrieveError);

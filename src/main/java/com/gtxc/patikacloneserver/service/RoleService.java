@@ -6,15 +6,15 @@ package com.gtxc.patikacloneserver.service;
 */
 
 import com.gtxc.patikacloneserver.exceptions.EntityNotFoundException;
-import com.gtxc.patikacloneserver.exceptions.SQLite3Exception;
 import com.gtxc.patikacloneserver.model.Role;
+import com.gtxc.patikacloneserver.model.RoleType;
 import com.gtxc.patikacloneserver.repository.RoleRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class RoleService implements SimpleEntityService<Role, Long> {
@@ -55,9 +55,9 @@ public class RoleService implements SimpleEntityService<Role, Long> {
             log.warn(unavailable);
             throw new IllegalArgumentException(unavailable);
         }
-        Optional<Role> newRole = roleRepository.save(role);
-        if (newRole.isPresent()) {
-            return newRole.get();
+        Role newRole = roleRepository.save(role);
+        if (newRole.getId() != null) {
+            return newRole;
         } else {
             String retrieveError = "Error while getting added user : " + role;
             log.warn(retrieveError);
@@ -88,7 +88,7 @@ public class RoleService implements SimpleEntityService<Role, Long> {
         return addNew(oldRole);
     }
 
-    public Role getByRoleType(String roleType) {
+    public Role getByRoleType(RoleType roleType) {
         return roleRepository.findByRoleType(roleType).orElse(null);
     }
 }
