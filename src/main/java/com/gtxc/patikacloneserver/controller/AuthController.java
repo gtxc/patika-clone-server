@@ -95,7 +95,7 @@ public class AuthController {
         Set<String> strRoles = signupRequest.getRole();
         Set<Role> roles = new HashSet<>();
         if (strRoles == null) {
-            Role userRole = roleRepository.findByRoleType(RoleType.USER.name())
+            Role userRole = roleRepository.findByRoleType(RoleType.USER)
                     .orElseThrow(() -> new RuntimeException(
                             "Error: Role is not found"
                     ));
@@ -104,35 +104,35 @@ public class AuthController {
             strRoles.forEach(role -> {
                 switch (role) {
                     case "INSTRUCTOR":
-                        Role instructorRole = roleRepository.findByRoleType(RoleType.INSTRUCTOR.name())
+                        Role instructorRole = roleRepository.findByRoleType(RoleType.INSTRUCTOR)
                                 .orElseThrow(() -> new RuntimeException(
                                         "Error: Role is not found"
                                 ));
                         roles.add(instructorRole);
                         break;
                     case "MODERATOR":
-                        Role moderatorRole = roleRepository.findByRoleType(RoleType.MODERATOR.name())
+                        Role moderatorRole = roleRepository.findByRoleType(RoleType.MODERATOR)
                                 .orElseThrow(() -> new RuntimeException(
                                         "Error: Role is not found"
                                 ));
                         roles.add(moderatorRole);
                         break;
                     case "STUDENT":
-                        Role studentRole = roleRepository.findByRoleType(RoleType.STUDENT.name())
+                        Role studentRole = roleRepository.findByRoleType(RoleType.STUDENT)
                                 .orElseThrow(() -> new RuntimeException(
                                         "Error: Role is not found"
                                 ));
                         roles.add(studentRole);
                         break;
                     case "DEV":
-                        Role devRole = roleRepository.findByRoleType(RoleType.DEV.name())
+                        Role devRole = roleRepository.findByRoleType(RoleType.DEV)
                                 .orElseThrow(() -> new RuntimeException(
                                         "Error: Role is not found"
                                 ));
                         roles.add(devRole);
                         break;
                     default:
-                        Role userRole = roleRepository.findByRoleType(RoleType.USER.name())
+                        Role userRole = roleRepository.findByRoleType(RoleType.USER)
                                 .orElseThrow(() -> new RuntimeException(
                                         "Error: Role is not found"
                                 ));
