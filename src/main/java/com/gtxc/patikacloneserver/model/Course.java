@@ -5,18 +5,31 @@ package com.gtxc.patikacloneserver.model;
     Project: patika-clone-server, Package: com.gtxc.patikacloneserver.model.
 */
 
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
 public class Course implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
+    @NotBlank
+    @Column(unique = true)
     private String name;
     private String info;
-
-    private Set<User> instructors = new HashSet<>();
-    private Set<User> students = new HashSet<>();
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable( name = "USER_COURSES",
+            joinColumns = @JoinColumn(name = "USER_ID"),
+            inverseJoinColumns = @JoinColumn(name = "COURSE_ID"))
+    private Set<User> users = new HashSet<>();
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable( name = "PATIKA_COURSES",
+            joinColumns = @JoinColumn(name = "PATIKA_ID"),
+            inverseJoinColumns = @JoinColumn(name = "COURSE_ID"))
     private Set<Patika> patikas = new HashSet<>();
 
     public Course() {}
@@ -66,19 +79,11 @@ public class Course implements Serializable {
     }
 
     public Set<User> getInstructors() {
-        return instructors;
+        return users;
     }
 
-    public void setInstructors(Set<User> instructors) {
-        this.instructors = instructors;
-    }
-
-    public Set<User> getStudents() {
-        return students;
-    }
-
-    public void setStudents(Set<User> students) {
-        this.students = students;
+    public void setInstructors(Set<User> users) {
+        this.users = users;
     }
 
     public Set<Patika> getPatikas() {
@@ -95,8 +100,7 @@ public class Course implements Serializable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", info='" + info + '\'' +
-                ", instructors=" + instructors +
-                ", students=" + students +
+                ", users=" + users +
                 ", patikas=" + patikas +
                 '}';
     }

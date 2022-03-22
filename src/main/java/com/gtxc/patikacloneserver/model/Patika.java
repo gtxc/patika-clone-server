@@ -5,17 +5,30 @@ package com.gtxc.patikacloneserver.model;
     Project: patika-clone-server, Package: com.gtxc.patikacloneserver.model.
 */
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
+@Entity
 public class Patika implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
+    @Column(unique = true)
     private String name;
 
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable( name = "PATIKA_COURSES",
+            joinColumns = @JoinColumn(name = "PATIKA_ID"),
+            inverseJoinColumns = @JoinColumn(name = "COURSE_ID"))
     private Set<Course> courses = new HashSet<>();
-    private Set<User> students = new HashSet<>();
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable( name = "USER_PATIKAS",
+                joinColumns = @JoinColumn(name = "USER_ID"),
+                inverseJoinColumns = @JoinColumn(name = "PATIKA_ID"))
+    private Set<User> users = new HashSet<>();
 
     public Patika() {}
 
@@ -53,11 +66,11 @@ public class Patika implements Serializable {
     }
 
     public Set<User> getStudents() {
-        return students;
+        return users;
     }
 
-    public void setStudents(Set<User> students) {
-        this.students = students;
+    public void setStudents(Set<User> users) {
+        this.users = users;
     }
 
     @Override
@@ -66,7 +79,7 @@ public class Patika implements Serializable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", courses=" + courses +
-                ", students=" + students +
+                ", users=" + users +
                 '}';
     }
 }

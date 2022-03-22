@@ -43,6 +43,10 @@ public class User implements Serializable {
                 joinColumns = @JoinColumn(name = "USER_ID"),
                 inverseJoinColumns = @JoinColumn(name = "COURSE_ID"))
     private Set<Course> courses = new HashSet<>();
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable( name = "USER_PATIKAS",
+                joinColumns = @JoinColumn(name = "USER_ID"),
+                inverseJoinColumns = @JoinColumn(name = "PATIKA_ID"))
     private Set<Patika> patikas = new HashSet<>();
 
     public User() {}
