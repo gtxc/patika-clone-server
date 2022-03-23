@@ -2,15 +2,28 @@ POST http://localhost:8080/api/auth/signin
 Content-Type: application/json
 
 {
-  "username": "gtx",
+  "username": "qtx",
   "password": "asdfasdf"
 }
 
 ###
 GET http://localhost:8080/api/test/user
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJndHgiLCJpYXQiOjE2NDgwMjEzMTMsImV4cCI6MTY0ODAyNDkxM30.ODf7i4olqmH5apmeN-O6y2QSygR3UNshSmcDZX3ivBSsy6Mc91QS455k5AWJC0ImFIAE-T1OVrHF5mP9B_FR_Q
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxdHgiLCJpYXQiOjE2NDgwMjUzODAsImV4cCI6MTY0ODAyODk4MH0.0QlYclq7NYcQ0AKWlyEWEFPcRxl1AsLHDnQdWJU1Lyg-Fhj8Cfqj_zGWiIXguWL83793OQA5SSqX1UMcIOfWrA
 
+
+###
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "gurkan",
+  "lastName": "turkarslan",
+  "username": "qtx",
+  "email": "gtx@mail.com",
+  "password": "asdfasdf",
+  "role": ["DEV", "STUDENT", "MODERATOR"]
+}
 
 ###
 POST http://localhost:8080/api/auth/signup
