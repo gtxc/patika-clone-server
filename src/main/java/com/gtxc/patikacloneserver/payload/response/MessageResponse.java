@@ -5,9 +5,11 @@ package com.gtxc.patikacloneserver.payload.response;
     Project: patika-clone-server, Package: com.gtxc.patikacloneserver.payload.response.
 */
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class MessageResponse {
     private String message;
 }
