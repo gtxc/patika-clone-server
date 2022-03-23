@@ -9,7 +9,7 @@ Content-Type: application/json
 ###
 GET http://localhost:8080/api/test/user
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2RmIiwiaWF0IjoxNjQ3NTE0MjE5LCJleHAiOjE2NDc1MTc4MTl9.f1ZLp4OtRwdCL4X4QGcX9AuvcTWl6euydJASW3Y7zHMvBmnVxoJhit0PyuYlmFhh-t8Ed8ngzwdyXgcaqs3kiA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2RmIiwiaWF0IjoxNjQ4MDIxNTQ1LCJleHAiOjE2NDgwMjUxNDV9.oe0Yw5i4wZ1qEGPdz7A8qjG50lVJJYP4J1fQn-EWW_iwI2iXxuTaziRVUJT_XVUsbdvtKYfub376hed5YGA-xQ
 
 
 ###
