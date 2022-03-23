@@ -7,7 +7,7 @@ package com.gtxc.patikacloneserver.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -21,16 +21,16 @@ public class User implements Serializable {
     private Long id;
     private String firstName;
     private String lastName;
-    @NotBlank
+    @NotNull
     @Size(max = 20)
     @Column(unique = true)
     private String username;
-    @NotBlank
+    @NotNull
     @Size(max = 50)
     @Email
     @Column(unique = true)
     private String email;
-    @NotBlank
+    @NotNull
     @Size(max = 120)
     private String password;
     @ManyToMany(fetch = FetchType.LAZY)
