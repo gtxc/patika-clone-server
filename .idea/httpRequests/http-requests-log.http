@@ -1,0 +1,508 @@
+GET http://localhost:8080/api/test/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJndHgiLCJpYXQiOjE2NDgwMjEzMTMsImV4cCI6MTY0ODAyNDkxM30.ODf7i4olqmH5apmeN-O6y2QSygR3UNshSmcDZX3ivBSsy6Mc91QS455k5AWJC0ImFIAE-T1OVrHF5mP9B_FR_Q
+
+<> 2022-03-23T104228.401.json
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "gtx",
+  "password": "asdfasdf"
+}
+
+<> 2022-03-23T104153.200.json
+
+###
+
+GET http://localhost:8080/api/test/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJndHgiLCJpYXQiOjE2NDgwMjExMjUsImV4cCI6MTY0ODAyNDcyNX0.c9q7HHrD4cKzwLWSh6PHuori8z5Qn9t7cpT8fHmcdmk_3N0TRFlUfA-j12xfnI3g1ylpZFbDwPevu5uHrMWV6w
+
+<> 2022-03-23T104054.401.json
+
+###
+
+GET http://localhost:8080/api/test/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJndHgiLCJpYXQiOjE2NDgwMjExMjUsImV4cCI6MTY0ODAyNDcyNX0.c9q7HHrD4cKzwLWSh6PHuori8z5Qn9t7cpT8fHmcdmk_3N0TRFlUfA-j12xfnI3g1ylpZFbDwPevu5uHrMWV6w
+
+<> 2022-03-23T103912.401.json
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "gtx",
+  "password": "asdfasdf"
+}
+
+<> 2022-03-23T103845.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "gt",
+  "lastName": "tt",
+  "username": "qtdev",
+  "email": "1qw@email.com",
+  "password": "password",
+  "role": ["DEV", "STUDENT"]
+}
+
+<> 2022-03-23T103811.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "username": "gtx",
+  "email": "gt@email.com",
+  "password": "asdfasdf",
+  "role": ["DEV", "STUDENT"]
+}
+
+<> 2022-03-23T103754.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "username": "gt",
+  "email": "gt@email.com",
+  "password": "asdfasdf",
+  "role": ["DEV", "STUDENT"]
+}
+
+<> 2022-03-23T103635.400.json
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "username": "gt",
+  "email": "gt@email.com",
+  "password": "asdfasdf",
+  "role": ["DEV", "STUDENT"]
+}
+
+<> 2022-03-23T103613.400.json
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "gt",
+  "lastName": "tt",
+  "username": "gt",
+  "email": "gt@email.com",
+  "password": "asdfasdf",
+  "role": ["DEV", "STUDENT"]
+}
+
+<> 2022-03-23T103541.400.json
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "gt",
+  "lastName": "tt",
+  "username": "gt",
+  "email": "gt@email.com",
+  "password": "asdfasdf",
+  "role": ["DEV", "STUDENT"]
+}
+
+<> 2022-03-23T103502.400.json
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "qtdev",
+  "password": "password"
+}
+
+<> 2022-03-22T203052.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "gt",
+  "lastName": "tt",
+  "username": "qtdev",
+  "email": "1qw@email.com",
+  "password": "password",
+  "role": ["DEV", "STUDENT"]
+}
+
+<> 2022-03-22T202915.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "gt",
+  "lastName": "tt",
+  "username": "qtdev",
+  "email": "1qw@email.com",
+  "password": "password",
+  "role": ["DEV", "STUDENT"]
+}
+
+<> 2022-03-22T172828.500.json
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "gt",
+  "lastName": "tt",
+  "username": "qtdev",
+  "email": "1qw@email.com",
+  "password": "password",
+  "role": ["DEV", "STUDENT"]
+}
+
+<> 2022-03-22T172632.500.json
+
+###
+
+GET http://localhost:8080/api/test/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2RmIiwiaWF0IjoxNjQ3NTE0MjE5LCJleHAiOjE2NDc1MTc4MTl9.f1ZLp4OtRwdCL4X4QGcX9AuvcTWl6euydJASW3Y7zHMvBmnVxoJhit0PyuYlmFhh-t8Ed8ngzwdyXgcaqs3kiA
+
+<> 2022-03-17T135055.200.txt
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "asdf",
+  "password": "asdfas"
+}
+
+<> 2022-03-17T135019.200.json
+
+###
+
+GET http://localhost:8080/api/test/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2RmIiwiaWF0IjoxNjQ3NTEzODIyLCJleHAiOjE2NDc1MTc0MjJ9._HcKT8vWSoTCXB5lDWRVOm8VzJqcGtAtMLmUHMi6tFaNwFG2nuQfS_KYSDbX3kkVtxKz512TMR3neqt1y2mGtg
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "asdf",
+  "password": "asdfas"
+}
+
+<> 2022-03-17T134342.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "asdf",
+  "password": "asdfas"
+}
+
+<> 2022-03-17T134308.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "asdf",
+  "password": "asdfas"
+}
+
+<> 2022-03-17T133955.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "asdf",
+  "password": "asdfas"
+}
+
+<> 2022-03-17T133907.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "asdf",
+  "password": "asdfas"
+}
+
+<> 2022-03-17T132625.200.json
+
+###
+
+GET http://localhost:8080/api/test/user
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2RmIiwiaWF0IjoxNjQ3NTExODQ0LCJleHAiOjE2NDc1MTU0NDR9.gUCtdBHlEpewMrD4SPvOSNqj_PVy3XRwKAwoNzSTsRDuCehtUMmrNp2LHlFaFBP1RxMwhgfMgS-zh14QSzpZYg
+
+###
+
+GET http://localhost:8080/api/test/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2RmIiwiaWF0IjoxNjQ3NTExODQ0LCJleHAiOjE2NDc1MTU0NDR9.gUCtdBHlEpewMrD4SPvOSNqj_PVy3XRwKAwoNzSTsRDuCehtUMmrNp2LHlFaFBP1RxMwhgfMgS-zh14QSzpZYg
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "asdf",
+  "password": "asdfas"
+}
+
+<> 2022-03-17T131044.200.json
+
+###
+
+GET http://localhost:8080/api/test/user
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxdGRldiIsImlhdCI6MTY0NzUxMDk5OCwiZXhwIjoxNjQ3NTE0NTk4fQ.uMKm9rWbxL71gGizScnosXiOnz4fam6xy0DZ6nCua_yaN-bZWl1om4cDUTN-Pst2thgFqXiSdCUzmYoDL_85og
+
+###
+
+GET http://localhost:8080/api/test/user
+Accept: application/json
+
+<> 2022-03-17T125931.401.json
+
+###
+
+GET http://localhost:8080/api/test/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxdGRldiIsImlhdCI6MTY0NzUxMDk5OCwiZXhwIjoxNjQ3NTE0NTk4fQ.uMKm9rWbxL71gGizScnosXiOnz4fam6xy0DZ6nCua_yaN-bZWl1om4cDUTN-Pst2thgFqXiSdCUzmYoDL_85og
+
+###
+
+GET http://localhost:8080/api/test/user
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxdGRldiIsImlhdCI6MTY0NzUxMDk5OCwiZXhwIjoxNjQ3NTE0NTk4fQ.uMKm9rWbxL71gGizScnosXiOnz4fam6xy0DZ6nCua_yaN-bZWl1om4cDUTN-Pst2thgFqXiSdCUzmYoDL_85og
+
+###
+
+GET http://localhost:8080/api/test/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxdGRldiIsImlhdCI6MTY0NzUxMDk5OCwiZXhwIjoxNjQ3NTE0NTk4fQ.uMKm9rWbxL71gGizScnosXiOnz4fam6xy0DZ6nCua_yaN-bZWl1om4cDUTN-Pst2thgFqXiSdCUzmYoDL_85og
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "qtdev",
+  "password": "password"
+}
+
+<> 2022-03-17T125639.200.json
+
+###
+
+GET http://localhost:8080/api/test/all
+Accept: application/json
+
+<> 2022-03-17T125631.200.json
+
+###
+
+GET http://localhost:8080/api/test/all
+Accept: application/json
+
+<> 2022-03-17T125630.200.json
+
+###
+
+GET http://localhost:8080/api/test/user
+Accept: application/json
+
+<> 2022-03-17T125625.401.json
+
+###
+
+GET http://localhost:8080/api/test/user
+Accept: application/json
+
+<> 2022-03-17T125618.401.json
+
+###
+
+GET http://localhost:8080/api/test/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2RmIiwiaWF0IjoxNjQ3NTA5MjA4LCJleHAiOjE2NDc1MTI4MDh9.3gmxzqrOD_8M4eYAAYh8Sc-O0UNBomUyZeY9r2aHLoFi20tQLp8RNoAY4VHn-hECuvvgRzHnUN1UGJlX9vmB1g
+
+###
+
+GET http://localhost:8081/api/test/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2RmIiwiaWF0IjoxNjQ3NTA5MjA4LCJleHAiOjE2NDc1MTI4MDh9.3gmxzqrOD_8M4eYAAYh8Sc-O0UNBomUyZeY9r2aHLoFi20tQLp8RNoAY4VHn-hECuvvgRzHnUN1UGJlX9vmB1g
+
+<> 2022-03-17T125431.404.html
+
+###
+
+GET http://localhost:8080/api/test/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2RmIiwiaWF0IjoxNjQ3NTA5MjA4LCJleHAiOjE2NDc1MTI4MDh9.3gmxzqrOD_8M4eYAAYh8Sc-O0UNBomUyZeY9r2aHLoFi20tQLp8RNoAY4VHn-hECuvvgRzHnUN1UGJlX9vmB1g
+
+###
+
+GET http://localhost:8080/api/test/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2RmIiwiaWF0IjoxNjQ3NTA5MjA4LCJleHAiOjE2NDc1MTI4MDh9.3gmxzqrOD_8M4eYAAYh8Sc-O0UNBomUyZeY9r2aHLoFi20tQLp8RNoAY4VHn-hECuvvgRzHnUN1UGJlX9vmB1g
+
+###
+
+GET http://localhost:8080/api/test/user
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2RmIiwiaWF0IjoxNjQ3NTA5MjA4LCJleHAiOjE2NDc1MTI4MDh9.3gmxzqrOD_8M4eYAAYh8Sc-O0UNBomUyZeY9r2aHLoFi20tQLp8RNoAY4VHn-hECuvvgRzHnUN1UGJlX9vmB1g
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "qtdev",
+  "password": "password"
+}
+
+<> 2022-03-17T114902.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "gt",
+  "lastName": "tt",
+  "username": "qtdev",
+  "email": "1qw@email.com",
+  "password": "password",
+  "role": ["DEV", "STUDENT"]
+}
+
+<> 2022-03-17T114845.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "gt",
+  "lastName": "tt",
+  "username": "qtdev",
+  "email": "1qw@email.com",
+  "passwd": "password",
+  "role": ["DEV", "STUDENT"]
+}
+
+<> 2022-03-17T114644.400.json
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "qtdev",
+  "passwd": "password"
+}
+
+<> 2022-03-17T114501.400.json
+
+###
+
+GET http://localhost:8080/api/test/user
+Accept: application/json
+
+<> 2022-03-17T114453.401.json
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "qtdev",
+  "passwd": "password"
+}
+
+<> 2022-03-15T142800.200.json
+
+###
+
+GET http://localhost:8080/api/test/all
+Accept: application/json
+
+<> 2022-03-15T142754.200.json
+
+###
+
+GET http://localhost:8080/api/test/user
+Accept: application/json
+
+<> 2022-03-15T142752.401.json
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "qtdev",
+  "passwd": "password"
+}
+
+<> 2022-03-15T142733.200.json
+
+###
+
