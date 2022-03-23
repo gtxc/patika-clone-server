@@ -2,14 +2,14 @@ POST http://localhost:8080/api/auth/signin
 Content-Type: application/json
 
 {
-  "username": "qtx",
+  "username": "gttx",
   "password": "asdfasdf"
 }
 
 ###
-GET http://localhost:8080/api/test/user
+GET http://localhost:8080/api/test/dev
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxdHgiLCJpYXQiOjE2NDgwMjUzODAsImV4cCI6MTY0ODAyODk4MH0.0QlYclq7NYcQ0AKWlyEWEFPcRxl1AsLHDnQdWJU1Lyg-Fhj8Cfqj_zGWiIXguWL83793OQA5SSqX1UMcIOfWrA
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJndHR4IiwiaWF0IjoxNjQ4MDI3NTI3LCJleHAiOjE2NDgwMzExMjd9.9W1yeqsy33yG2JI6SLwf5UhLZX4LK6D4zvK0JmOqcCLc1AqtcTnAbc-PLaCUYMGWhC7ApgbWkFN2tiJEFKc_tg
 
 
 ###
@@ -19,7 +19,7 @@ Content-Type: application/json
 {
   "firstName": "gurkan",
   "lastName": "turkarslan",
-  "username": "qtx",
+  "username": "gttx",
   "email": "gtx@mail.com",
   "password": "asdfasdf",
   "role": ["DEV", "STUDENT", "MODERATOR"]
