@@ -6,6 +6,7 @@ package com.gtxc.patikacloneserver.model;
 */
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -18,6 +19,7 @@ public class Role implements Serializable {
     private Long id;
     @Enumerated(EnumType.STRING)
     @Column(unique = true)
+    @NotNull
     private RoleType roleType;
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable( name = "USER_ROLES",

@@ -6,6 +6,7 @@ package com.gtxc.patikacloneserver.model;
 */
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -16,9 +17,9 @@ public class Patika implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotNull
     @Column(unique = true)
     private String name;
-
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable( name = "PATIKA_COURSES",
             joinColumns = @JoinColumn(name = "PATIKA_ID"),
