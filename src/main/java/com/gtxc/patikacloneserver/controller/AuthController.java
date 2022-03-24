@@ -70,7 +70,6 @@ public class AuthController {
                 .collect(Collectors.toList());
         userRepository.findByUsername(userDetails.getUsername()).ifPresent(u -> {
             u.setLastLogin(new Timestamp(new Date().getTime()));
-            u.setIsOnline(true);
             userRepository.save(u);
         });
         return ResponseEntity.ok(new JwtResponse(

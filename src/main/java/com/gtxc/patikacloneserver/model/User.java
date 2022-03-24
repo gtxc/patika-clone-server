@@ -42,7 +42,6 @@ public class User implements Serializable {
     @NotNull
     private Timestamp createdOn;
     private Timestamp lastLogin;
-    private Boolean isOnline;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable( name = "USER_ROLES",
                 joinColumns = @JoinColumn(name = "USER_ID"),
