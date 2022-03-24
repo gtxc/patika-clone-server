@@ -8,11 +8,13 @@ package com.gtxc.patikacloneserver.controller;
 import com.gtxc.patikacloneserver.model.Course;
 import com.gtxc.patikacloneserver.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
-@Controller
+@CrossOrigin(origins = "*", maxAge = 3600L)
+@RestController
+@RequestMapping("/api/courses")
 public class CourseController {
 
     private final CourseService courseService;
@@ -22,35 +24,35 @@ public class CourseController {
         this.courseService = courseService;
     }
 
-    @GetMapping("/api/courses")
+    @GetMapping("/")
     public @ResponseBody List<Course> getAllCourses() {
         return courseService.getAll();
     }
 
-    @GetMapping("/api/courses/{id}")
+    @GetMapping("/{id}")
     public @ResponseBody Course getCourseById(@PathVariable("id") Long id) {
         return courseService.getById(id);
     }
 
-    @PostMapping("/api/courses")
+    @PostMapping("/")
     public @ResponseBody List<Course> addNewCourse(@RequestBody Course course) {
         courseService.addNew(course);
         return getAllCourses();
     }
 
-    @DeleteMapping("/api/courses/{id}")
+    @DeleteMapping("/{id}")
     public @ResponseBody List<Course> removeCourse(@PathVariable("id") Long id) {
         courseService.removeById(id);
         return getAllCourses();
     }
 
-    @DeleteMapping("/api/courses/remove-all")
+    @DeleteMapping("/remove-all")
     public @ResponseBody List<Course> removeCourses() {
         courseService.removeAll();
         return getAllCourses();
     }
 
-    @PutMapping("/api/courses/{id}")
+    @PutMapping("/{id}")
     public @ResponseBody Course updateCourse(@RequestBody Course course, @PathVariable("id") Long id) {
         return courseService.update(course, id);
     }

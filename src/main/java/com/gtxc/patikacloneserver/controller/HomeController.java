@@ -5,9 +5,13 @@ package com.gtxc.patikacloneserver.controller;
     Project: patika-clone-server, Package: com.gtxc.patikacloneserver.controller.
 */
 
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@CrossOrigin(origins = "*", maxAge = 3600L)
+@RestController
+@RequestMapping("/api/home")
 public class HomeController {
 
 }
