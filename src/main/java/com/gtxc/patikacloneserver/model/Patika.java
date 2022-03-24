@@ -35,9 +35,4 @@ public class Patika implements Serializable {
                 joinColumns = @JoinColumn(name = "USER_ID"),
                 inverseJoinColumns = @JoinColumn(name = "PATIKA_ID"))
     private Set<User> users = new HashSet<>();
-
-
-    public Patika(String name) {
-        this.name = name;
-    }
 }

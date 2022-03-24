@@ -36,8 +36,4 @@ public class Course implements Serializable {
             joinColumns = @JoinColumn(name = "PATIKA_ID"),
             inverseJoinColumns = @JoinColumn(name = "COURSE_ID"))
     private Set<Patika> patikas = new HashSet<>();
-
-    public Course(String name) {
-        this.name = name;
-    }
 }
