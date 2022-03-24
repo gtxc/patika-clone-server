@@ -93,8 +93,4 @@ public class UserService implements SimpleEntityService<User, Long> {
         removeById(id);
         return addNew(oldUser);
     }
-
-    public User getByUsername(String username) {
-        return userRepository.findByUsername(username).orElse(null);
-    }
 }

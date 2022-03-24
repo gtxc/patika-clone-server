@@ -87,8 +87,4 @@ public class CourseService implements SimpleEntityService<Course, Long> {
         removeById(id);
         return addNew(oldCourse);
     }
-
-    public Course getByName(String name) {
-        return courseRepository.findByName(name).orElse(null);
-    }
 }

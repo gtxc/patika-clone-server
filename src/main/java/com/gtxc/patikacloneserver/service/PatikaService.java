@@ -86,8 +86,4 @@ public class PatikaService implements SimpleEntityService<Patika, Long> {
         removeById(id);
         return addNew(oldPatika);
     }
-
-    public Patika getByName(String name) {
-        return patikaRepository.findByName(name).orElse(null);
-    }
 }

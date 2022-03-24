@@ -87,8 +87,4 @@ public class RoleService implements SimpleEntityService<Role, Long> {
         removeById(id);
         return addNew(oldRole);
     }
-
-    public Role getByRoleType(RoleType roleType) {
-        return roleRepository.findByRoleType(roleType).orElse(null);
-    }
 }
