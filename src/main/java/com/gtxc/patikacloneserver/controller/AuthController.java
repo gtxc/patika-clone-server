@@ -68,12 +68,11 @@ public class AuthController {
         List<String> roles = userDetails.getAuthorities().stream()
                 .map(GrantedAuthority::getAuthority)
                 .collect(Collectors.toList());
-        User user = userRepository.findByUsername(userDetails.getUsername()).orElse(null);
-        if (user != null) {
-            user.setLastLogin(new Timestamp(new Date().getTime()));
-            user.setIsOnline(true);
-            userRepository.save(user);
-        }
+        userRepository.findByUsername(userDetails.getUsername()).ifPresent(u -> {
+            u.setLastLogin(new Timestamp(new Date().getTime()));
+            u.setIsOnline(true);
+            userRepository.save(u);
+        });
         return ResponseEntity.ok(new JwtResponse(
                 jwt,
                 userDetails.getId(),

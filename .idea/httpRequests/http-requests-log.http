@@ -6,6 +6,34 @@ Content-Type: application/json
   "password": "asdfasdf"
 }
 
+<> 2022-03-24T105814.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "gurkan",
+  "lastName": "turkarslan",
+  "username": "gttx",
+  "email": "gtx@mail.com",
+  "password": "asdfasdf",
+  "role": ["DEV", "STUDENT", "MODERATOR"]
+}
+
+<> 2022-03-24T105804.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "gttx",
+  "password": "asdfasdf"
+}
+
 <> 2022-03-24T104409.200.json
 
 ###
@@ -531,34 +559,6 @@ Content-Type: application/json
 }
 
 <> 2022-03-23T105736.200.json
-
-###
-
-POST http://localhost:8080/api/auth/signin
-Content-Type: application/json
-
-{
-  "username": "gtx",
-  "password": "asdfasdf"
-}
-
-<> 2022-03-23T105720.401.json
-
-###
-
-POST http://localhost:8080/api/auth/signup
-Content-Type: application/json
-
-{
-  "firstName": "gurkan",
-  "lastName": "turkarslan",
-  "username": "qtx",
-  "email": "gtx@mail.com",
-  "password": "asdfasdf",
-  "role": ["DEV", "STUDENT", "MODERATOR"]
-}
-
-<> 2022-03-23T105652.200.json
 
 ###
 
