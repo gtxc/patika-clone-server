@@ -19,6 +19,7 @@ import java.util.List;
 public class CourseService implements SimpleEntityService<Course, Long> {
 
     public static final Logger log = LoggerFactory.getLogger(CourseService.class);
+
     private final CourseRepository courseRepository;
 
     @Autowired

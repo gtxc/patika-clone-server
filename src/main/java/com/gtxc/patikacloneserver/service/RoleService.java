@@ -7,7 +7,6 @@ package com.gtxc.patikacloneserver.service;
 
 import com.gtxc.patikacloneserver.exceptions.EntityNotFoundException;
 import com.gtxc.patikacloneserver.model.Role;
-import com.gtxc.patikacloneserver.model.RoleType;
 import com.gtxc.patikacloneserver.repository.RoleRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +19,7 @@ import java.util.List;
 public class RoleService implements SimpleEntityService<Role, Long> {
 
     public static final Logger log = LoggerFactory.getLogger(RoleService.class);
+
     private final RoleRepository roleRepository;
 
     @Autowired
