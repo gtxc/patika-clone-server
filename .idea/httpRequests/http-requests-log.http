@@ -1,3 +1,59 @@
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "gt",
+  "lastName": "tt",
+  "username": "qtdev",
+  "email": "1qw@email.com",
+  "password": "password",
+  "role": ["DEV", "STUDENT"]
+}
+
+<> 2022-03-24T152901.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "gttx",
+  "password": "asdfasdf"
+}
+
+<> 2022-03-24T152850.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "gttx",
+  "password": "asdfasdf"
+}
+
+<> 2022-03-24T151912.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "gurkan",
+  "lastName": "turkarslan",
+  "username": "gttx",
+  "email": "gtx@mail.com",
+  "password": "asdfasdf",
+  "role": ["DEV", "STUDENT", "MODERATOR"]
+}
+
+<> 2022-03-24T151903.200.json
+
+###
+
 POST http://localhost:8080/api/auth/signin
 Content-Type: application/json
 
@@ -523,50 +579,6 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxdHgiLCJpYXQiOjE2NDgwMjI5NzMsImV4cCI6MTY0ODAyNjU3M30.cxML4_-LWU0PHsWFp0LE0DvS9EKebfIZ9elAXstOo_FHxNVBOs1hudwWrngq9R6ppvefXiTCBu4hNESF_6Q6ZA
 
 <> 2022-03-23T111332.401.json
-
-###
-
-GET http://localhost:8080/api/test/user
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxdHgiLCJpYXQiOjE2NDgwMjI5NzMsImV4cCI6MTY0ODAyNjU3M30.cxML4_-LWU0PHsWFp0LE0DvS9EKebfIZ9elAXstOo_FHxNVBOs1hudwWrngq9R6ppvefXiTCBu4hNESF_6Q6ZA
-
-<> 2022-03-23T111002.401.json
-
-###
-
-POST http://localhost:8080/api/auth/signin
-Content-Type: application/json
-
-{
-  "username": "qtx",
-  "password": "asdfasdf"
-}
-
-<> 2022-03-23T110933.200.json
-
-###
-
-POST http://localhost:8080/api/auth/signup
-Content-Type: application/json
-
-{
-  "firstName": "gurkan",
-  "lastName": "turkarslan",
-  "username": "qtx",
-  "email": "gtx@mail.com",
-  "password": "asdfasdf",
-  "role": ["DEV", "STUDENT", "MODERATOR"]
-}
-
-<> 2022-03-23T110850.200.json
-
-###
-
-GET http://localhost:8080/api/test/user
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxdHgiLCJpYXQiOjE2NDgwMjIyNTYsImV4cCI6MTY0ODAyNTg1Nn0.lycJJO5CI3J4_3ANr21N9_QVeBWA_DS5Khbb9FATaasTqLPvD6QFH7Friu7HHiALX1BIuuXL-yBITheAyCBdgQ
-
-<> 2022-03-23T105814.401.json
 
 ###
 
