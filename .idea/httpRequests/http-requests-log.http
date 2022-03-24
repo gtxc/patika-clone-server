@@ -6,6 +6,34 @@ Content-Type: application/json
   "password": "asdfasdf"
 }
 
+<> 2022-03-24T114625.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signup
+Content-Type: application/json
+
+{
+  "firstName": "gurkan",
+  "lastName": "turkarslan",
+  "username": "gttx",
+  "email": "gtx@mail.com",
+  "password": "asdfasdf",
+  "role": ["DEV", "STUDENT", "MODERATOR"]
+}
+
+<> 2022-03-24T114615.200.json
+
+###
+
+POST http://localhost:8080/api/auth/signin
+Content-Type: application/json
+
+{
+  "username": "gttx",
+  "password": "asdfasdf"
+}
+
 <> 2022-03-24T105814.200.json
 
 ###
@@ -539,26 +567,6 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxdHgiLCJpYXQiOjE2NDgwMjIyNTYsImV4cCI6MTY0ODAyNTg1Nn0.lycJJO5CI3J4_3ANr21N9_QVeBWA_DS5Khbb9FATaasTqLPvD6QFH7Friu7HHiALX1BIuuXL-yBITheAyCBdgQ
 
 <> 2022-03-23T105814.401.json
-
-###
-
-GET http://localhost:8080/api/test/user
-Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJxdHgiLCJpYXQiOjE2NDgwMjIyNTYsImV4cCI6MTY0ODAyNTg1Nn0.lycJJO5CI3J4_3ANr21N9_QVeBWA_DS5Khbb9FATaasTqLPvD6QFH7Friu7HHiALX1BIuuXL-yBITheAyCBdgQ
-
-<> 2022-03-23T105800.401.json
-
-###
-
-POST http://localhost:8080/api/auth/signin
-Content-Type: application/json
-
-{
-  "username": "qtx",
-  "password": "asdfasdf"
-}
-
-<> 2022-03-23T105736.200.json
 
 ###
 
