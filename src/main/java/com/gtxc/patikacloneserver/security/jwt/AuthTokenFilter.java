@@ -5,6 +5,7 @@ package com.gtxc.patikacloneserver.security.jwt;
     Project: patika-clone-server, Package: com.gtxc.patikacloneserver.security.jwt.
 */
 
+import com.gtxc.patikacloneserver.config.AppProperties;
 import com.gtxc.patikacloneserver.security.services.UserDetailsServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -56,8 +57,8 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     }
 
     private String parseJwt(HttpServletRequest httpServletRequest) {
-        String headerAuth = httpServletRequest.getHeader("Authorization");
-        if (StringUtils.hasText(headerAuth) && headerAuth.startsWith("Bearer")) {
+        String headerAuth = httpServletRequest.getHeader(AppProperties.HEADER_AUTH);
+        if (StringUtils.hasText(headerAuth) && headerAuth.startsWith(AppProperties.TOKEN_TYPE)) {
             return headerAuth.substring(7);
         }
         return null;

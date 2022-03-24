@@ -5,6 +5,7 @@ package com.gtxc.patikacloneserver.payload.response;
     Project: patika-clone-server, Package: com.gtxc.patikacloneserver.payload.response.
 */
 
+import com.gtxc.patikacloneserver.config.AppProperties;
 import lombok.Data;
 
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.List;
 @Data
 public class JwtResponse {
     private String token;
-    private String type = "Bearer";
+    private String type = AppProperties.TOKEN_TYPE;
     private Long id;
     private String username;
     private String email;
