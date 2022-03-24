@@ -6,7 +6,6 @@ package com.gtxc.patikacloneserver.payload.request;
 */
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;

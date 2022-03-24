@@ -13,6 +13,7 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -38,6 +39,10 @@ public class User implements Serializable {
     @NotNull
     @Size(max = 120)
     private String password;
+    @NotNull
+    private Date createdOn;
+    private Date lastLogin;
+    private Boolean isOnline;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable( name = "USER_ROLES",
                 joinColumns = @JoinColumn(name = "USER_ID"),

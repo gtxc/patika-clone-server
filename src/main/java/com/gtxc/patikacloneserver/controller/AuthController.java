@@ -27,6 +27,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -66,6 +67,11 @@ public class AuthController {
         List<String> roles = userDetails.getAuthorities().stream()
                 .map(GrantedAuthority::getAuthority)
                 .collect(Collectors.toList());
+        User user = userRepository.findByUsername(userDetails.getUsername()).orElse(null);
+        if (user != null) {
+            user.setLastLogin(new Date());
+            user.setIsOnline(true);
+        }
         return ResponseEntity.ok(new JwtResponse(
                 jwt,
                 userDetails.getId(),
@@ -141,6 +147,7 @@ public class AuthController {
             });
         }
         user.setRoles(roles);
+        user.setCreatedOn(new Date());
         userService.addNew(user);
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
     }
