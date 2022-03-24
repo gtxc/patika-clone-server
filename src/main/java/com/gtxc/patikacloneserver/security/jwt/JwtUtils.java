@@ -5,6 +5,7 @@ package com.gtxc.patikacloneserver.security.jwt;
     Project: patika-clone-server, Package: com.gtxc.patikacloneserver.security.jwt.
 */
 
+import com.gtxc.patikacloneserver.config.SecurityConstants;
 import com.gtxc.patikacloneserver.security.services.UserDetailsImpl;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
@@ -20,7 +21,8 @@ public class JwtUtils {
 
     public static final Logger log = LoggerFactory.getLogger(JwtUtils.class);
 
-    @Value("${gtxc.app.jwtSecret}")
+//    @Value("${gtxc.app.jwtSecret}")
+    @Value(SecurityConstants.asdf)
     private String jwtSecret;
     @Value("${gtxc.app.jwtExpirationMs}")
     private int jwtExpirationMs;
