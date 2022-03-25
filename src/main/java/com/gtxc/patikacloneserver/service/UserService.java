@@ -18,7 +18,7 @@ import java.util.List;
 public class UserService implements SimpleEntityService<User, Long> {
 
     public static final Logger log = LoggerFactory.getLogger(UserService.class);
-    
+
     private final UserRepository userRepository;
 
     @Autowired

@@ -7,9 +7,9 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8080/api/test/dev
+GET http://localhost:8080/gg/
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJndHR4IiwiaWF0IjoxNjQ4MDI3NTI3LCJleHAiOjE2NDgwMzExMjd9.9W1yeqsy33yG2JI6SLwf5UhLZX4LK6D4zvK0JmOqcCLc1AqtcTnAbc-PLaCUYMGWhC7ApgbWkFN2tiJEFKc_tg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJndHR4IiwiaWF0IjoxNjQ4MTI1NjI1LCJleHAiOjE2NDgxMjc0MjV9.SXr1j8-4qrxUQEtW9AdWuh1bmTIUMazc8Kaq81cN3EnTpEvuaHd5zMJ5wUOFUEMEBPTN8FxZdhm6KSsNUnGgJw
 
 
 ###

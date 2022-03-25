@@ -5,6 +5,8 @@ package com.gtxc.patikacloneserver.model;
     Project: patika-clone-server, Package: com.gtxc.patikacloneserver.model.
 */
 
+import org.springframework.stereotype.Component;
+
 import java.io.Serializable;
 
 public enum RoleType implements Serializable {
