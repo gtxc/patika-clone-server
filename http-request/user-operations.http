@@ -7,9 +7,9 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:8080/gg/
+GET http://localhost:8080/api/test/user
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJndHR4IiwiaWF0IjoxNjQ4MTI1NjI1LCJleHAiOjE2NDgxMjc0MjV9.SXr1j8-4qrxUQEtW9AdWuh1bmTIUMazc8Kaq81cN3EnTpEvuaHd5zMJ5wUOFUEMEBPTN8FxZdhm6KSsNUnGgJw
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJndHR4IiwiaWF0IjoxNjQ4MjEwODA2LCJleHAiOjE2NDgyMTI2MDZ9.L0bZ7BIH89olr8IojF7h6nas2CPC_MYosz9hDx2325WE44ks_eln8e3TpxZrDIsSbE079qjVzmswxqWXAU-YAg
 
 
 ###
@@ -24,6 +24,7 @@ Content-Type: application/json
   "password": "asdfasdf",
   "role": ["DEV", "STUDENT", "MODERATOR"]
 }
+
 
 ###
 POST http://localhost:8080/api/auth/signup
