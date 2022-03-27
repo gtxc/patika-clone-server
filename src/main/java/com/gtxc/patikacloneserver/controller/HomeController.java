@@ -6,6 +6,7 @@ package com.gtxc.patikacloneserver.controller;
 */
 
 import com.gtxc.patikacloneserver.repository.RoleRepository;
+import com.gtxc.patikacloneserver.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,15 +17,17 @@ import org.springframework.web.bind.annotation.*;
 public class HomeController {
 
     private final RoleRepository roleRepository;
+    private final UserRepository userRepository;
 
     @Autowired
-    public HomeController(RoleRepository roleRepository) {
+    public HomeController(RoleRepository roleRepository, UserRepository userRepository) {
         this.roleRepository = roleRepository;
+        this.userRepository = userRepository;
     }
 
     @GetMapping("/{id}/users")
-    public ResponseEntity<?> getRoleUsers(@PathVariable Long id) {
-        return ResponseEntity.ok(roleRepository.findRoleUsers(id));
+    public ResponseEntity<?> getRoleUsers(@PathVariable("id") Long id) {
+        return ResponseEntity.ok(userRepository.findAllById(roleRepository.findRoleUsers(id)));
     }
 }
 
